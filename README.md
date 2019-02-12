@@ -16,6 +16,7 @@
 - [Video on Usage](https://www.youtube.com/watch?v=whEZn7wmrDc)
 - [Webinar](https://www.youtube.com/watch?v=dz9S7R8r5gw)
 - [CoreDNS in k8s](https://www.youtube.com/watch?v=qRiLmLACYSY)
+- [What are DNS Zones](https://www.think-like-a-computer.com/2011/06/11/dns-zones-explained/)
 
 
 *Contribution Stats: * 1 WIP PR created
