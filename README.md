@@ -24,3 +24,8 @@
 #### General Notes about k8s and the whole ecosystem around it
 
 - **Kubernetes** [TODO]
+
+- **CoreDNS**
+  - Clients make requests that are routed to the DNS servers (seem like primary but are secondary) through recursives (like Google or Cloudflare)
+  - refresh -> how many times the secondary pulls data from the hidden primary
+  - retry -> checks if the data has changed, pulls the headers check for change in serial and if it is changed then it refreshes
