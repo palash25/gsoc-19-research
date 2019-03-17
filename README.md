@@ -30,4 +30,7 @@
   - refresh -> how many times the secondary pulls data from the hidden primary
   - retry -> checks if the data has changed, pulls the headers check for change in serial and if it is changed then it refreshes
   
+  **Important:** Caddy [middleware](https://github.com/pyed/ipfilter) for block-allow IP mechanism
   Firewall example codebase https://github.com/middelink/mikrotik-fwban
+  ipfilter library: https://github.com/jpillora/ipfilter/
+  read later: https://www.reddit.com/r/golang/comments/3wpi6w/is_it_possible_to_monitor_and_redirect_http/
