@@ -19,8 +19,6 @@
 - [What are DNS Zones](https://www.think-like-a-computer.com/2011/06/11/dns-zones-explained/)
 
 
-*Contribution Stats: * 1 WIP PR created
-
 #### General Notes about k8s and the whole ecosystem around it
 
 - **Kubernetes** [TODO]
@@ -30,7 +28,23 @@
   - refresh -> how many times the secondary pulls data from the hidden primary
   - retry -> checks if the data has changed, pulls the headers check for change in serial and if it is changed then it refreshes
   
+  
+ ###### Firewalling project 
  -  **Important:** Caddy [middleware](https://github.com/pyed/ipfilter) for block-allow IP mechanism
  -  Firewall example codebase https://github.com/middelink/mikrotik-fwban
  -  ipfilter library: https://github.com/jpillora/ipfilter/
  -  read later: https://www.reddit.com/r/golang/comments/3wpi6w/is_it_possible_to_monitor_and_redirect_http/
+
+
+###### Azure DNS backend project
+
+AWS										A
+
+- ListHostedZonesByNameWithContext		
+- ListResourceRecordSetsPagesWithContext	
+
+AZURE
+
+- [(ZonesClient) List](https://godoc.org/github.com/Azure/azure-sdk-for-go/services/dns/mgmt/2017-10-01/dns#ZonesClient.List)
+
+- [(RecordSetsClient)ListAllByDNSZone](https://godoc.org/github.com/Azure/azure-sdk-for-go/services/dns/mgmt/2017-10-01/dns#RecordSetsClient.ListAllByDNSZone)
