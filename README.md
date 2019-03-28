@@ -38,7 +38,7 @@
 
 ###### Azure DNS backend project
 
-AWS										A
+AWS
 
 - ListHostedZonesByNameWithContext		
 - ListResourceRecordSetsPagesWithContext	
@@ -48,3 +48,23 @@ AZURE
 - [(ZonesClient) List](https://godoc.org/github.com/Azure/azure-sdk-for-go/services/dns/mgmt/2017-10-01/dns#ZonesClient.List)
 
 - [(RecordSetsClient)ListAllByDNSZone](https://godoc.org/github.com/Azure/azure-sdk-for-go/services/dns/mgmt/2017-10-01/dns#RecordSetsClient.ListAllByDNSZone)
+
+Record types
+
+Azure provides the following record types that will be supported as a part of this project
+
+```go
+const (
+    A     RecordType = original.A
+    AAAA  RecordType = original.AAAA
+    CAA   RecordType = original.CAA
+    CNAME RecordType = original.CNAME
+    MX    RecordType = original.MX
+    NS    RecordType = original.NS
+    PTR   RecordType = original.PTR
+    SOA   RecordType = original.SOA
+    SRV   RecordType = original.SRV
+    TXT   RecordType = original.TXT
+)
+```
+
