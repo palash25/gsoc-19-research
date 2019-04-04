@@ -68,3 +68,13 @@ const (
 )
 ```
 
+### GCP DNS backend
+
+- API Ref:  https://cloud.google.com/dns/docs/apis
+- golang sdk: https://godoc.org/google.golang.org/api/dns/v1
+
+- Listing resource records:  https://cloud.google.com/dns/docs/reference/v1/resourceRecordSets/list
+  - [golang sdk method](https://godoc.org/google.golang.org/api/dns/v1#ResourceRecordSetsListCall.Do)
+
+- Listing managed zone:  https://cloud.google.com/dns/docs/reference/v1/managedZones/list
+  - [golang sdk method](https://godoc.org/google.golang.org/api/dns/v1#ManagedZonesListCall.Do)
