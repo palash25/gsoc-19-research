@@ -78,3 +78,48 @@ const (
 
 - Listing managed zone:  https://cloud.google.com/dns/docs/reference/v1/managedZones/list
   - [golang sdk method](https://godoc.org/google.golang.org/api/dns/v1#ManagedZonesListCall.Do)
+
+
+## DNS Jargon
+
+- **Zones:**
+
+  *Zone file:* a sample zone file
+  ```
+  ; zone file for example.com
+  $TTL 2d    ; 172800 secs default TTL for zone
+  $ORIGIN example.com.
+  @             IN      SOA   ns1.example.com. hostmaster.example.com. (
+                          2003080800 ; se = serial number
+                          12h        ; ref = refresh
+                          15m        ; ret = update retry
+                          3w         ; ex = expiry
+                          3h         ; min = minimum
+                          )
+                IN      NS      ns1.example.com.
+                IN      MX  10  mail.example.net.
+  joe           IN      A       192.168.254.3
+  www           IN      CNAME   joe 
+
+  ```
+  
+  - comments start with a `;`
+  - directives start with a `$`
+  - first Resource Record must be the SOA (Start of Authority) record and `$TTL` must appear before it.
+  - TTL is the caching time for RR
+
+- **Resource records:** Are a DNS server entries. A bunch of name value pairs (domain name to ip address)
+
+Types of resource records are:
+- IPv4 host address (A)
+- IPv6 host address (AAAA, pronounced "quad-A")
+- CNAME (Alias): Stands for canonical name.
+- Pointer (PTR): Used for reverse lookups, IP addresses to domain names
+- Mail Exchanger (MX): used by mail applications to locate mail servers
+- Service (SRV): 
+
+- **:**
+
+References: 
+- http://www.zytrax.com/books/dns/ch8/
+- https://dnspropagation.net/articles/dns-records/
